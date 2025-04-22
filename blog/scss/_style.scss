@@ -1,0 +1,79 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&display=swap");
+body {
+  font-family: "Montserrat", serif;
+}
+@mixin avatar {
+  width: 50px;
+  height: 50px;
+}
+@mixin postTime {
+  font-size: 0.7rem;
+}
+.avatar {
+  @include avatar;
+}
+.nav-blog-img {
+  height: 60px;
+}
+.articles {
+  .avatar {
+    @include avatar;
+  }
+  .card {
+    height: 540px;
+
+    .card-post-detail {
+      .date-text {
+        @include postTime;
+      }
+    }
+    .card-img-top {
+      height: 230px;
+      object-fit: cover;
+    }
+  }
+}
+
+.mainArticleSection {
+  .main-article-logo {
+    height: 350px;
+    width: 100%;
+    object-fit: cover;
+  }
+  .avatar {
+    @include avatar;
+  }
+  .articlePostDetail {
+    .date-text {
+      @include postTime;
+    }
+  }
+}
+.developers {
+  .avatar {
+    @include avatar;
+  }
+}
+.modal-post-img {
+  width: 100%;
+  object-fit: cover;
+  max-height: 400px;
+}
+.footer-links {
+  li {
+    a {
+      color: inherit;
+    }
+    transition: 500ms ease-in-out;
+    &:hover {
+      color: $success;
+      transform: translateY(-5px);
+    }
+  }
+}
+.footer-bottom {
+  img {
+    height: 30px;
+    width: 30px;
+  }
+}
